@@ -3,18 +3,18 @@ import { COLORS } from '../constants/style';
 
 const CarPrice = ({ originalPrice, salePrice, direction }) => {
   return (
-    <PriceGroup direction={direction}>
+    <Container direction={direction}>
       <OriginalPrice>
         ${originalPrice}.00
         <Divider>/</Divider>
         <DayText>day</DayText>
       </OriginalPrice>
       {salePrice && <SalePrice>${salePrice}.00</SalePrice>}
-    </PriceGroup>
+    </Container>
   );
 };
 
-const PriceGroup = styled.div`
+const Container = styled.div`
   display: flex;
   gap: 4px;
   justify-content: center;

@@ -53,19 +53,19 @@ const Footer = () => {
   );
 };
 
-const Container = styled.div`
+const Container = styled.footer`
   width: calc(100% - 120px);
   padding: 60px;
-  position: fixed;
-  bottom: 0;
 
   display: flex;
   flex-direction: column;
+
+  background-color: #ffffff;
 `;
 
 const FooterContent = styled.div`
   margin-top: 20px;
-  padding-bottom: 36px;
+  padding-bottom: 44px;
 
   display: flex;
 

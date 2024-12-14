@@ -20,7 +20,7 @@ const RentalCarCard = ({ cardInfo }) => {
   } = cardInfo;
 
   return (
-    <CarInfoContainer>
+    <Container>
       <HeaderWrapper>
         <TitleGroup>
           <CarName>{name}</CarName>
@@ -54,12 +54,11 @@ const RentalCarCard = ({ cardInfo }) => {
         <CarPrice originalPrice={originalPrice} salePrice={salePrice} />
         <Button buttonText="Rent Now" onClick={() => console.log('Rent Now')} />
       </FooterWrapper>
-    </CarInfoContainer>
+    </Container>
   );
 };
 
-const CarInfoContainer = styled.div`
-  width: 256px;
+const Container = styled.div`
   padding: 24px;
 
   display: flex;
@@ -67,6 +66,7 @@ const CarInfoContainer = styled.div`
   align-items: center;
   flex-direction: column;
 
+  background-color: #ffffff;
   border-radius: 10px;
 `;
 
@@ -102,7 +102,7 @@ const LikeButton = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  height: 160px;
+  height: 196px;
 
   display: flex;
   align-items: center;
@@ -118,7 +118,7 @@ const CarImage = styled.img`
 const SpecGroup = styled.div`
   width: 100%;
   padding: 0 2px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 
   display: flex;
   justify-content: space-between;

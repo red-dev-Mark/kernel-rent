@@ -3,14 +3,14 @@ import { COLORS } from '../constants/style';
 
 const CarSpecItem = ({ icon, value, unit }) => {
   return (
-    <SpecItem>
+    <Container>
       <IconWrapper>{icon}</IconWrapper>
-      <SpecText>{`${value} ${unit || ''}`}</SpecText>
-    </SpecItem>
+      {`${value} ${unit || ''}`}
+    </Container>
   );
 };
 
-const SpecItem = styled.div`
+const Container = styled.div`
   display: flex;
   gap: 6px;
   align-items: center;
@@ -21,10 +21,6 @@ const IconWrapper = styled.div`
   width: 20px;
   height: 20px;
   align-items: center;
-`;
-
-const SpecText = styled.p`
-  font-size: 14px;
 `;
 
 export default CarSpecItem;
