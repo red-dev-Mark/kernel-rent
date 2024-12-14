@@ -1,5 +1,4 @@
 import Button from '../components/Button';
-import CarCard from '../components/CarCard';
 import { COLORS } from '../constants/style';
 import { BUTTON_TEXTS } from '../constants/text';
 
@@ -20,7 +19,6 @@ const MainPage = () => {
   return (
     <Button
       buttonText={BUTTON_TEXTS.DESCRIPTION}
-      a
       bgColor={COLORS.SECONDARY}
       onClick={() => console.log('hi')}
     />
