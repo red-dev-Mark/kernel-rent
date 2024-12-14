@@ -1,4 +1,4 @@
-import RentalCarCard from '../components/RentalCarCard';
+import RentalCarCard from './RentalCarCard';
 import styled from 'styled-components';
 import { COLORS } from '../constants/style';
 
@@ -13,8 +13,9 @@ const CarList = ({ title, data, onViewAllClick }) => {
       </Header>
 
       <CarsList>
-        {data.map((carInfo) => (
+        {data.map((carInfo, index) => (
           <RentalCarCard
+            key={index}
             cardInfo={carInfo}
             onClick={() => console.log('Rent Now')}
           />

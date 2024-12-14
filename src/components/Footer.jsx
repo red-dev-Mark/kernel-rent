@@ -86,7 +86,7 @@ const BrandTitle = styled.h1`
   color: ${COLORS.PRIMARY};
 `;
 
-const BrandDescription = styled.p`
+const BrandDescription = styled.div`
   color: ${COLORS.DESCRIPTION};
 `;
 
