@@ -1,3 +1,6 @@
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
 html,
 body,
 div,
@@ -64,6 +67,9 @@ time {
   vertical-align: baseline;
 }
 
-body {
-  font-family: 'Plus Jakarta Sans';
+html {
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
+`;
+
+export default GlobalStyle;
