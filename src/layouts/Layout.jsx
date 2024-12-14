@@ -6,7 +6,7 @@ const Layout = () => {
   return (
     <Container>
       <Outlet />
-      <Footer />
+      {/* <Footer /> */}
     </Container>
   );
 };

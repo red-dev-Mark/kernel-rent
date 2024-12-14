@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Button from './Button';
 import { COLORS } from '../constants/style';
 import { Heart } from 'lucide-react';
+import CarPrice from './CarPrice';
 
 const RentalCarCard = ({ cardInfo }) => {
   const {
@@ -34,7 +35,9 @@ const RentalCarCard = ({ cardInfo }) => {
         </LikeButton>
       </HeaderWrapper>
 
-      <CarImage src={image} alt="렌터카 이미지" />
+      <ImageWrapper>
+        <CarImage src={image} alt="렌터카 이미지" />
+      </ImageWrapper>
 
       <SpecsWrapper>
         <p>{fuelCapacity}</p>
@@ -43,12 +46,7 @@ const RentalCarCard = ({ cardInfo }) => {
       </SpecsWrapper>
 
       <FooterWrapper>
-        <PriceGroup>
-          <OriginalPrice>
-            ${originalPrice}.00/<span> day</span>
-          </OriginalPrice>
-          {salePrice && <SalePrice>${salePrice}.00</SalePrice>}
-        </PriceGroup>
+        <CarPrice originalPrice={originalPrice} salePrice={salePrice} />
         <Button buttonText="Rent Now" onClick={() => console.log('Rent Now')} />
       </FooterWrapper>
     </CarInfoContainer>
@@ -98,6 +96,15 @@ const LikeButton = styled.div`
   cursor: pointer;
 `;
 
+const ImageWrapper = styled.div`
+  height: 160px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+`;
+
 const CarImage = styled.img`
   width: 100%;
   transform: scaleX(-1);
@@ -114,28 +121,6 @@ const FooterWrapper = styled.div`
 
   display: flex;
   justify-content: space-between;
-`;
-
-const PriceGroup = styled.div`
-  display: flex;
-  gap: 4px;
-  flex-direction: column;
-`;
-
-const OriginalPrice = styled.p`
-  font-size: 20px;
-  font-weight: bold;
-  color: ${COLORS.BLACK};
-
-  span {
-    font-size: 14px;
-    color: ${COLORS.INFO};
-  }
-`;
-
-const SalePrice = styled.p`
-  font-size: 14px;
-  color: ${COLORS.INFO};
 `;
 
 export default RentalCarCard;

@@ -11,10 +11,12 @@ const MainPage = () => {
     //   bgColor={COLORS.SECONDARY}
     //   onClick={() => console.log('hi')}
     // />
-    <RentalCarCard
-      cardInfo={popularData[1]}
-      onClick={() => console.log('Rent Now')}
-    />
+    popularData.map((carInfo) => (
+      <RentalCarCard
+        cardInfo={carInfo}
+        onClick={() => console.log('Rent Now')}
+      />
+    ))
   );
 };
 
