@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from './Button';
 import { COLORS } from '../constants/style';
 import { Heart, Fuel, CircleDotDashed, UsersRound } from 'lucide-react';
 import CarPrice from './CarPrice';
 import CarSpecItem from './CarSpecItem';
+import Button from './common/Button';
 
 const RentalCarCard = ({ cardInfo }) => {
   const {
