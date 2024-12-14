@@ -3,13 +3,11 @@ import { COLORS } from '../constants/style';
 
 const Button = ({ buttonText, bgColor, onClick }) => {
   return (
-    <StyledButton onClick={onClick} bgColor={bgColor}>
+    <StyledButton onClick={onClick} $bgColor={bgColor}>
       {buttonText}
     </StyledButton>
   );
 };
-
-export default Button;
 
 const StyledButton = styled.button`
   width: 120px;
@@ -21,9 +19,11 @@ const StyledButton = styled.button`
   font-weight: 600;
   line-height: 48px;
   color: ${COLORS.WHITE};
-  background-color: ${({ bgColor = COLORS.PRIMARY }) => bgColor};
+  background-color: ${({ $bgColor = COLORS.PRIMARY }) => $bgColor};
 
   border-radius: 4px;
   border: none;
   cursor: pointer;
 `;
+
+export default Button;
