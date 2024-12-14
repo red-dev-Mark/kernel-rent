@@ -63,3 +63,7 @@ time {
   font: inherit;
   vertical-align: baseline;
 }
+
+body {
+  font-family: 'Plus Jakarta Sans';
+}

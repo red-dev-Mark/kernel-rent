@@ -1,7 +1,7 @@
 import Button from '../components/Button';
 import { COLORS } from '../constants/style';
 import { BUTTON_TEXTS } from '../constants/text';
-import popularData from '../mock/popular-car.json';
+// import popularData from '../mock/popular-car.json';
 
 const MainPage = () => {
   return (
