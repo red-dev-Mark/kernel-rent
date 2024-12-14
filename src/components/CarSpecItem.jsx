@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { COLORS } from '../constants/style';
 
-const CarSpecItem = ({ type, icon, value, text }) => {
+const CarSpecItem = ({ icon, value, unit }) => {
   return (
     <SpecItem>
       <IconWrapper>{icon}</IconWrapper>
-      <SpecText>{`${value} ${text}`}</SpecText>
+      <SpecText>{`${value} ${unit || ''}`}</SpecText>
     </SpecItem>
   );
 };
@@ -14,7 +15,7 @@ const SpecItem = styled.div`
   gap: 6px;
   align-items: center;
 
-  color: #90a3bf;
+  color: ${COLORS.INFO};
 `;
 const IconWrapper = styled.div`
   width: 20px;

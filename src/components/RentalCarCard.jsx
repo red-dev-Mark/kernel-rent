@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Button from './Button';
 import { COLORS } from '../constants/style';
-import { Heart } from 'lucide-react';
+import { Heart, Fuel, CircleDotDashed, UsersRound } from 'lucide-react';
 import CarPrice from './CarPrice';
+import CarSpecItem from './CarSpecItem';
 
 const RentalCarCard = ({ cardInfo }) => {
   const {
@@ -39,11 +40,15 @@ const RentalCarCard = ({ cardInfo }) => {
         <CarImage src={image} alt="렌터카 이미지" />
       </ImageWrapper>
 
-      <SpecsWrapper>
-        <p>{fuelCapacity}</p>
-        <p>{gearType}</p>
-        <p>{seats}</p>
-      </SpecsWrapper>
+      <SpecGroup>
+        <CarSpecItem icon={<Fuel size={20} />} value={fuelCapacity} unit="L" />
+        <CarSpecItem icon={<CircleDotDashed size={20} />} value={gearType} />
+        <CarSpecItem
+          icon={<UsersRound size={20} />}
+          value={seats}
+          unit="People"
+        />
+      </SpecGroup>
 
       <FooterWrapper>
         <CarPrice originalPrice={originalPrice} salePrice={salePrice} />
@@ -110,10 +115,14 @@ const CarImage = styled.img`
   transform: scaleX(-1);
 `;
 
-const SpecsWrapper = styled.div`
+const SpecGroup = styled.div`
   width: 100%;
+  padding: 0 2px;
+  margin-bottom: 12px;
 
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const FooterWrapper = styled.div`
