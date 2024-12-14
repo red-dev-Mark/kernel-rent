@@ -66,7 +66,7 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
 
-  background-color: #ffffff;
+  background-color: ${COLORS.WHITE};
   border-radius: 10px;
 `;
 

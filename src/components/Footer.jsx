@@ -60,7 +60,7 @@ const Container = styled.footer`
   display: flex;
   flex-direction: column;
 
-  background-color: #ffffff;
+  background-color: ${COLORS.WHITE};
 `;
 
 const FooterContent = styled.div`
@@ -115,6 +115,8 @@ const SectionTitle = styled.h1`
 const SectionLink = styled.p`
   font-size: 14px;
   color: ${COLORS.DESCRIPTION};
+
+  cursor: pointer;
 `;
 
 const BottomBar = styled.div`
@@ -135,6 +137,8 @@ const PolicyLinks = styled.div`
   font-size: 14px;
   font-weight: bold;
   color: ${COLORS.BLACK};
+
+  cursor: pointer;
 `;
 
 export default Footer;
