@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-import Button from './common/Button';
-import { COLORS } from '../constants/style';
+import Button from '../common/Button';
+import { COLORS } from '../../constants/style';
 
+// theme: 'primary' | 'secondary'
 const RentalPromotionCard = ({
   theme = 'primary',
   titles,

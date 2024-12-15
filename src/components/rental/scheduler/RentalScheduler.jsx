@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { COLORS } from '../constants/style';
+import { COLORS } from '../../../constants/style';
+import SelectionItem from './SelectionItem';
 
 // mode: 'pick-up' | 'drop-off'
 const RentalScheduler = ({ mode }) => {
@@ -13,33 +14,19 @@ const RentalScheduler = ({ mode }) => {
       </Header>
 
       <SelectionContainer>
-        <SelectionItem>
-          <SelectionLabel>Locations</SelectionLabel>
-          <SelectionDropdown>
-            <option value="">Select your city</option>
-          </SelectionDropdown>
-        </SelectionItem>
+        <SelectionItem label="Locations" placeholder="city" />
         <Divider />
-        <SelectionItem>
-          <SelectionLabel>Date</SelectionLabel>
-          <SelectionDropdown>
-            <option value="">Select your date</option>
-          </SelectionDropdown>
-        </SelectionItem>
+        <SelectionItem label="Date" placeholder="date" />
         <Divider />
-        <SelectionItem>
-          <SelectionLabel>Time</SelectionLabel>
-          <SelectionDropdown>
-            <option value="">Select your time</option>
-          </SelectionDropdown>
-        </SelectionItem>
+        <SelectionItem label="Time" placeholder="time" />
       </SelectionContainer>
     </Container>
   );
 };
 
 const Container = styled.div`
-  width: 486px;
+  /* width: 486px; */
+  width: 100%;
   padding: 24px 48px;
 
   display: flex;
@@ -88,33 +75,12 @@ const SelectionContainer = styled.div`
   align-items: center;
 `;
 
-const SelectionItem = styled.div`
-  width: 126px;
-
-  display: flex;
-  gap: 8px;
-  flex-direction: column;
-`;
-
 const Divider = styled.div`
   width: 1px;
   height: 48px;
   margin: 0 24px;
 
   background-color: ${COLORS.BORDER};
-`;
-
-const SelectionLabel = styled.p`
-  font-weight: bold;
-  color: ${COLORS.BLACK};
-`;
-
-const SelectionDropdown = styled.select`
-  font-size: 12px;
-  color: ${COLORS.INFO};
-
-  border: 0;
-  cursor: pointer;
 `;
 
 export default RentalScheduler;

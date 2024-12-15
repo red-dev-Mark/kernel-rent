@@ -16,10 +16,6 @@ const Layout = () => {
 };
 
 const Container = styled.div`
-  width: 100%;
-  height: 100dvh;
-  overflow-y: auto;
-
   display: flex;
   flex-direction: column;
 

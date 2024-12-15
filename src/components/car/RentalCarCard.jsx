@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { COLORS } from '../constants/style';
+import { COLORS } from '../../constants/style';
 import { Heart, Fuel, CircleDotDashed, UsersRound } from 'lucide-react';
 import CarPrice from './CarPrice';
 import CarSpecItem from './CarSpecItem';
-import Button from './common/Button';
+import Button from '../common/Button';
 
 const RentalCarCard = ({ cardInfo }) => {
   const {
@@ -29,7 +29,7 @@ const RentalCarCard = ({ cardInfo }) => {
 
         <LikeButton>
           {isLiked ? (
-            <Heart color="#ff0000" fill="#ff0000" />
+            <Heart color={COLORS.RED} fill={COLORS.RED} />
           ) : (
             <Heart color={COLORS.INFO} strokeWidth={1.5} />
           )}

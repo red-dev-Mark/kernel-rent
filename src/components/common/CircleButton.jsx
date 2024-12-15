@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { COLORS } from '../../constants/style';
 
 export const IconButton = ({ icon, hasNotification = false }) => {
   return <IconWrapper $hasNotification={hasNotification}>{icon}</IconWrapper>;
@@ -35,7 +36,7 @@ const BasicButtonStyles = css`
     top: 0;
     right: 0;
 
-    background-color: #ff0000;
+    background-color: ${COLORS.RED};
     border-radius: 50%;
   }
 `;

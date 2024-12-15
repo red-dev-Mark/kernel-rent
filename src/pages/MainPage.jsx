@@ -1,20 +1,19 @@
 import styled from 'styled-components';
-import PopularCar from '../components/CarList';
+import CarList from '../components/car/CarList';
 import popularCarData from '../mock/popular-car.json';
 import promotionCarImage1 from '../assets/images/promotion-car-1.png';
 import promotionCarImage2 from '../assets/images/promotion-car-2.png';
 import recommendationCarData from '../mock/recommendation-car.json';
 import Button from '../components/common/Button';
 import { COLORS } from '../constants/style';
-import RentalPromotionCard from '../components/RentalPromotionCard';
-import RentalScheduler from '../components/RentalScheduler';
+import RentalPromotionCard from '../components/rental/RentalPromotionCard';
+import RentalSchedulerGroup from '../components/rental/scheduler/RentalSchedulerGroup';
 
 const MainPage = () => {
   const totalCarCount = popularCarData.length + recommendationCarData.length;
 
   return (
     <>
-      <RentalScheduler mode="pick-up" />
       <PromotionGroup>
         <RentalPromotionCard
           titles={['The Best Platform', 'for Car Rental']}
@@ -35,13 +34,15 @@ const MainPage = () => {
         />
       </PromotionGroup>
 
+      <RentalSchedulerGroup />
+
       <CarListGroup>
-        <PopularCar
+        <CarList
           title="Popular Car"
           data={popularCarData}
           onViewAllClick={() => console.log('View All')}
         />
-        <PopularCar title="Recommendation Car" data={recommendationCarData} />
+        <CarList title="Recommendation Car" data={recommendationCarData} />
       </CarListGroup>
 
       <SectionFooter>

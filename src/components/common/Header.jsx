@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Search, SlidersHorizontal, Heart, Bell, Settings } from 'lucide-react';
 import { COLORS } from '../../constants/style';
-import { ProfileButton, IconButton } from '../CircleButton';
+import { ProfileButton, IconButton } from './CircleButton';
 
 const Header = () => {
   return (
