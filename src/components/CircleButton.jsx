@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components';
 
 export const IconButton = ({ icon, hasNotification = false }) => {
-  return <IconWrapper hasNotification={hasNotification}>{icon}</IconWrapper>;
+  return <IconWrapper $hasNotification={hasNotification}>{icon}</IconWrapper>;
 };
 
 export const ProfileButton = ({ image, hasNotification = false }) => {
   return (
-    <ImageWrapper hasNotification={hasNotification}>
+    <ImageWrapper $hasNotification={hasNotification}>
       <img src={image} alt="프로필 사진" />
     </ImageWrapper>
   );
@@ -28,7 +28,7 @@ const BasicButtonStyles = css`
 
   &::after {
     content: '';
-    display: ${({ hasNotification }) => (hasNotification ? 'block' : 'none')};
+    display: ${({ $hasNotification }) => ($hasNotification ? 'block' : 'none')};
     width: 12px;
     height: 12px;
     position: absolute;

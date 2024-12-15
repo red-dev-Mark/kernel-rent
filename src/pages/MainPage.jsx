@@ -7,12 +7,14 @@ import recommendationCarData from '../mock/recommendation-car.json';
 import Button from '../components/common/Button';
 import { COLORS } from '../constants/style';
 import RentalPromotionCard from '../components/RentalPromotionCard';
+import RentalScheduler from '../components/RentalScheduler';
 
 const MainPage = () => {
   const totalCarCount = popularCarData.length + recommendationCarData.length;
 
   return (
     <>
+      <RentalScheduler mode="pick-up" />
       <PromotionGroup>
         <RentalPromotionCard
           titles={['The Best Platform', 'for Car Rental']}
